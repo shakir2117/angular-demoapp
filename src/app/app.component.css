@@ -245,11 +245,11 @@ span.search {
  font-weight: 400;
 }
 .contant-main input[type="submit"] {
- width: 5%;
- height: 8.9%;
+ width: 3%;
+ height:fit-content;
  vertical-align: top;
  margin: 0px;
- background: url(/assets/images/mail.png)no-repeat 2em;
+ background: url(/assets/images/mail.png)no-repeat;
  outline:none;
  border:none;
  margin: 15px 0px;
