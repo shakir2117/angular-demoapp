@@ -2,7 +2,7 @@
 .header{
 	background:url(/assets/images/banner.jpg)no-repeat ;
 	background-size:100%;
-	min-height:630px;
+	min-height:100%;
 }
 .header-b{
 	background:url(/assets/images/banner.jpg)no-repeat;
@@ -124,6 +124,7 @@ select {
 }
 .reg{
 	text-align: center;
+  padding-top: 6em;
 }
 .regbutton{
 	width: 14%;
@@ -358,9 +359,4 @@ a{
 .footer-main{
   box-sizing: border-box;
   display: flex;
-}
-@media (min-width: 100%) {
-  .container {
-    width: 750px;
-  }
 }
