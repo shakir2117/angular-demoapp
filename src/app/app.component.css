@@ -1,7 +1,7 @@
 /*--header style start here--*/
 .header{
-	background:url(/assets/images/banner.jpg)no-repeat;
-	background-size:cover;
+	background:url(/assets/images/banner.jpg)no-repeat ;
+	background-size:100%;
 	min-height:630px;
 }
 .header-b{
@@ -37,26 +37,23 @@ span.menu{
 .header-navg ul li{
  margin:10px 20px 0px 0px;
  display:inline-block;
+ cursor: pointer;
 }
 .header-navg ul li a{
   color:#fff;
   font-size:14px;
   font-weight:400;
 }
-.header-navg ul li a:hover,.header-navg ul li a.active{
+.header-navg ul li a.active,.header-navg ul li a:hover{
   color:#fff;
   border-top: 4px solid #4ACAFF;
   text-decoration:none;
-  transition: all 0.3s ease;
- -webkit-transition: all 0.3s ease;
- -moz-transition: all 0.3s ease;
- -o-transition: all 0.3s ease;
-}
-.header-main {
-  padding-top: 2em;
+-webkit-transition: all 0.3s ease;
+-moz-transition: all 0.3s ease;
+-o-transition: all 0.3s ease;
 }
 .home{
- padding-top:6em;
+ padding:4em 0em;
 }
 .header-bottom {
   padding-top: 10em;
@@ -361,4 +358,9 @@ a{
 .footer-main{
   box-sizing: border-box;
   display: flex;
+}
+@media (min-width: 100%) {
+  .container {
+    width: 750px;
+  }
 }
