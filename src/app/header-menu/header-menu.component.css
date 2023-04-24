@@ -1,0 +1,49 @@
+.logo {
+    float: left;
+    width: 39%;
+    text-align: center;
+}
+
+.header-navg {
+    float: right;
+    width: 59%;
+    text-align: center;
+}
+
+span.menu {
+    display: none;
+}
+
+.header-navg ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.header-navg ul li {
+    margin: 10px 20px 0px 0px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.header-navg ul li a {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.header-navg ul li a.active,
+.header-navg ul li a:hover {
+    color: #fff;
+    border-top: 4px solid #4ACAFF;
+    text-decoration: none;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+}
+a{
+	text-decoration:none;
+}
+.home {
+    padding: 4em 0em;
+}

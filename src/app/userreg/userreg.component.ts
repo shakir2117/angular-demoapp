@@ -1,24 +1,16 @@
 import { Component } from '@angular/core';
 import { OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { MatDialog } from '@angular/material/dialog';
-import {MatDialogConfig} from "@angular/material/dialog";
-import { MatDialogModule } from '@angular/material/dialog';
-import { UserregComponent } from '../userreg/userreg.component';
-import { MatFormField } from '@angular/material/form-field';
+import { FormsModule } from '@angular/forms';
 
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
-}
-)
+  selector: 'app-userreg',
+  templateUrl: './userreg.component.html',
+  styleUrls: ['./userreg.component.css']
+})
 
-
-export class HomeComponent implements OnInit{
-
-	
+export class UserregComponent implements OnInit {
 
   registrationForm!: FormGroup;
 
@@ -64,5 +56,6 @@ export class HomeComponent implements OnInit{
 			this.url = reader.result; 
 		}
 	}
+
 }
 
