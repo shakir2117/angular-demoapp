@@ -1,56 +1,61 @@
-form {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 100px;
-  border-radius: 5px;
-  }
-  
-  form label {
-    font-size: 18px;
-    margin-bottom: 10px;
-  }
-  
-  form input[type="text"],
-  form input[type="range"],
-  form select {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    font-size: 16px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-  }
-  
-  form input[type="range"] {
-    margin-bottom: 0;
-  }
-  
-  form input[type="file"] {
-    margin-bottom: 0;
-  }
-  
-  form button {
-    padding: 10px 20px;
-    font-size: 16px;
-    border-radius: 5px;
-    border: none;
-    background-color: #2196f3;
-    color: #fff;
-    cursor: pointer;
-  }
-  
-  form button:hover {
-    background-color: #0d8bf2;
-  }
-  
-  .error {
-    color: red;
-    margin-top: 5px;
-  }
+.header-main {
+  background-color: deepskyblue;
+}
+.title {
+  height: 50px;
+  margin: 2em 2em 2em 4em;
+  color: deepskyblue;
+}
 
-  
+.profile {
+  margin: 0em 0em 4em 4em;
+  background: #e6dbdb;
+  height: 10em;
+  width: 10em;
+}
 
-dialogConfig.position = {
-  'top': '0',
-  'left': '0'
-};
+.edit {
+  width: 150px;
+  padding: 1em;
+  font-size: 1em;
+  font-weight: 300;
+  outline: none;
+  border: none;
+  border-radius: 2px;
+  background: #eeff00;
+  color: #000000;
+  cursor: pointer;
+  font-style: italic;
+  margin-left: 3em;
+}
+.agbutton {
+  width: 30%;
+  padding: 1em;
+  font-size: 1em;
+  font-weight: 300;
+  outline: none;
+  border: none;
+  border-radius: 2px;
+  background: #00ff4c;
+  color: #fff;
+  cursor: pointer;
+  font-style: italic;
+  margin-bottom: 2em;
+  margin-top: 10em;
+}
+.p_container {
+  margin: 4em 10em;
+}
+.float-container {
+  padding: 5em;
+}
+
+.float-child {
+  width: 50%;
+  float: left;
+  padding: 20px;
+  padding-left: 8em;
+}
+p {
+  text-size-adjust: 10;
+}

@@ -1,61 +1,34 @@
 import { Component } from '@angular/core';
 import { OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { FormsModule } from '@angular/forms';
-
+import { CandidateService } from '../candidate.service';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-userreg',
   templateUrl: './userreg.component.html',
-  styleUrls: ['./userreg.component.css']
+  styleUrls: ['./userreg.component.css'],
 })
-
 export class UserregComponent implements OnInit {
+  constructor(private candidates: CandidateService, private http: HttpClient) {}
+  candidatedata: any = [];
+  // ngOnInit() {
+  //   this.candidates.candidatesget().subscribe(
+  //     (alldata) => {
+  //       console.log('Form data got form server');
+  //       console.log(alldata);
+  //       this.candidatedata = alldata;
+  //     },
+  //     (error) => {
+  //       console.log('Error reciving form data to server:', error);
+  //     }
+  //   );
+  // }
 
-  registrationForm!: FormGroup;
-
-  constructor(private formBuilder: FormBuilder) { }
+  // constructor(private http: HttpClient) {}
 
   ngOnInit() {
-    this.registrationForm = this.formBuilder.group({
-      Name: ['', [Validators.required, Validators.pattern('[a-zA-Z ]*'), Validators.maxLength(20)]],
-      email:['',Validators.required, Validators.pattern("[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*")],
-      age: ['', [Validators.required, Validators.min(18), Validators.max(100)]],
-      interests: [''],
-      addressType: ['', Validators.required],
-      address1: [''],
-      address2: [''],
-      companyAddress1: [''],
-      companyAddress2: ['']
+    this.http.get('http://localhost:3000/candidate/').subscribe((data) => {
+      this.candidatedata = data;
     });
   }
-
-  //url; //Angular 8
-	url: any; //Angular 11, for stricter type
-	msg = "";
-	
-	//selectFile(event) { //Angular 8
-	selectFile(event: any) { //Angular 11, for stricter type
-		if(!event.target.files[0] || event.target.files[0].length == 0) {
-			this.msg = 'You must select an image';
-			return;
-		}
-		
-		var mimeType = event.target.files[0].type;
-		
-		if (mimeType.match(/image\/*/) == null) {
-			this.msg = "Only images are supported";
-			return;
-		}
-		
-		var reader = new FileReader();
-		reader.readAsDataURL(event.target.files[0]);
-		
-		reader.onload = (_event) => {
-			this.msg = "";
-			this.url = reader.result; 
-		}
-	}
-
 }
-

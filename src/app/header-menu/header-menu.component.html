@@ -1,24 +1,24 @@
 <div class="header-main home">
     <div class="logo">
         <a routerLink="#"><img src="/assets/images/logo.png" alt=""></a>
-    </div> 
+    </div>
     <span class="menu"> <img src="/assets/images/icon.png" alt=""> </span>
     <div class="header-navg">
         <ul class="res">
             <li><a class="active" routerLink="">HOME</a></li>
-            <li><a routerLink="#">ABOUT US</a></li>
+            <li><a routerLink="userreg">PROFILE</a></li>
             <li><a routerLink="#">JOBS</a></li>
             <li><a routerLink="#">CLIENTS</a></li>
             <li><a routerLink="#">EMPLOYERS</a></li>
             <li><a routerLink="#">CONTACT US</a></li>
         </ul>
         <script>
-          $( "span.menu").click(function() {
-              $(  "ul.res" ).slideToggle("slow", function() {
-                  // Animation complete.
-              });
-          });
-     </script>
+            $("span.menu").click(function () {
+                $("ul.res").slideToggle("slow", function () {
+                    // Animation complete.
+                });
+            });
+        </script>
     </div>
     <div class="clearfix"> </div>
 </div>

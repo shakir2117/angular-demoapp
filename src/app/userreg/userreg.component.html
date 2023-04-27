@@ -1,16 +1,34 @@
-<p>
-  <mat-form-field appearance="fill">
-    <mat-label>Fill form field</mat-label>
-    <input matInput placeholder="Placeholder">
-    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-    <mat-hint>Hint</mat-hint>
-  </mat-form-field>
-</p>
-<p>
-  <mat-form-field appearance="outline">
-    <mat-label>Outline form field</mat-label>
-    <input matInput placeholder="Placeholder">
-    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-    <mat-hint>Hint</mat-hint>
-  </mat-form-field>
-</p>
+<div class="header-main">
+  <app-header-menu></app-header-menu>
+</div>
+<div>
+  <H1 class="title">Profile</H1>
+</div>
+<div class="float-container" *ngFor="let i of candidatedata">
+
+  <div class="float-child">
+    <div class="green">
+      {{i.Image}}
+    </div>
+    <div>
+      <button class="edit">
+        Edit Image
+      </button>
+      <button class="edit">
+        Edit Profile
+      </button>
+    </div>
+  </div>
+
+  <div class="float-child">
+    <div class="blue">
+      <p>
+        I am {{i.FName}} and i am {{i.age}} and<br>
+        you can send your emails to {{i.email}}<br>
+        i live at {{i.homeAddress1}} i like {{i.interests}}
+      </p>
+      <button class="agbutton">I Agree</button>
+    </div>
+  </div>
+
+</div>

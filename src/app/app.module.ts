@@ -1,14 +1,15 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { MatDialogModule } from '@angular/material/dialog';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MatDialog } from '@angular/material/dialog';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
-import {MatFormFieldModule} from '@angular/material/form-field';
-
-
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatLabel } from '@angular/material/form-field';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -21,7 +22,7 @@ import { HeaderMenuComponent } from './header-menu/header-menu.component';
     AppComponent,
     HomeComponent,
     UserregComponent,
-    HeaderMenuComponent
+    HeaderMenuComponent,
   ],
   imports: [
     BrowserModule,
@@ -33,9 +34,10 @@ import { HeaderMenuComponent } from './header-menu/header-menu.component';
     MatFormFieldModule,
     ReactiveFormsModule,
     NgbModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
-  entryComponents: [UserregComponent]
+  entryComponents: [UserregComponent],
 })
-export class AppModule { }
+export class AppModule {}
