@@ -1,0 +1,5 @@
+I/o decorator
+view child decorator
+ng class , ng style
+lazy loading
+javascript basic {conditions , loops}
