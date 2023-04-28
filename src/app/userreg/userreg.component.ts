@@ -13,6 +13,18 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class UserregComponent implements OnInit {
   EditForm!: FormGroup;
 
+  canupdate = {
+    FName: "",
+    LName: "",
+    email: "",
+    age: "",
+    intrests: "",
+    homeAddress1: "",
+    homeAddress2: "",
+    companyAddress1: "",
+    companyAddress2: "",
+  }
+
   constructor(private formBuilder: FormBuilder, private candidate: CandidateService, private http: HttpClient) { }
   candidatedata: any = [];
   // ngOnInit() {
@@ -65,27 +77,37 @@ export class UserregComponent implements OnInit {
       homeAddress1: [''],
       homeAddress2: [''],
     });
-    this.http.get('http://localhost:3000/candidate/').subscribe((data) => {
+    this.http.get('http://localhost:3000/candidate/1').subscribe((data) => {
       this.candidatedata = data;
     });
   }
+  // onClickSubmit() {
+
+  //   this.candidate.candidate(this.EditForm.value).subscribe(
+  //     (result: any) => {
+  //       console.log('Form data sent to server');
+  //       console.log(result);
+  //     },
+  //     (error: any) => {
+  //       console.log('Error sending form data to server:', error);
+  //     }
+  //   );
+  // }
+
+  onClickSubmit() {
+    this.candidate.candidateput(this.EditForm.value).subscribe(
+      (data: any) => {
+        console.log('user updated successfully')
+      }
+    )
+    location.reload();
+  }
+
   onClickEdit() {
-    this.http.get('http://localhost:3000/candidate/').subscribe((data) => {
+    this.http.get('http://localhost:3000/candidate/1').subscribe((data) => {
       this.candidatedata = data;
       console.log(data)
     });
   }
-  onClickSubmit() {
 
-    this.candidate.candidate(this.EditForm.value).subscribe(
-      (result: any) => {
-        console.log('Form data sent to server');
-        console.log(result);
-      },
-      (error: any) => {
-        console.log('Error sending form data to server:', error);
-      }
-    );
-
-  }
 }

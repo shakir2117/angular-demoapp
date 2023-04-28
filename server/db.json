@@ -1,32 +1,18 @@
 {
   "candidate": [
     {
-      "Image": {},
-      "FName": "shakir",
-      "LName": "choudhary",
+      "Image": "",
+      "FName": "shakirr",
+      "LName": "chouhdary",
       "email": "shakirchoudhary2117@gmail.com",
-      "age": 22,
+      "age": 44,
       "interests": "games",
       "addressType": "home",
       "companyAddress1": "",
       "companyAddress2": "",
       "homeAddress1": "zdasdasd",
-      "homeAddress2": "sadasd",
+      "homeAddress2": "sadsad",
       "id": 1
-    },
-    {
-      "Image": "",
-      "FName": "shakir",
-      "LName": "choudhary",
-      "email": "shakir2117@outlook.com",
-      "age": 31,
-      "interests": "games",
-      "addressType": "home",
-      "companyAddress1": "",
-      "companyAddress2": "",
-      "homeAddress1": "mumbai",
-      "homeAddress2": "maharasthra",
-      "id": 2
     }
   ]
 }
